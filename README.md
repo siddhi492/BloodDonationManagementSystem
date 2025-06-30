@@ -35,3 +35,22 @@ A modern web-based Blood Donation Management System 💉 built with Spring Boot 
 🎨 HTML + CSS
 
 📦 Maven
+
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+![BloodDonationHomePage](screenshots/BloodDonationHomePage.png)
+
+### 📋 Request Profile Page
+![RequestProfile](screenshots/RequestProfile.png)
+
+### 💉 Donor Profile Page
+![DonorProfile](screenshots/DonorProfile.png)
+
+### 📜 Donor List View
+![DonorList](screenshots/DonorList.png)
+
+### 🩸 Blood Requests View
+![BloodRequests](screenshots/BloodRequests.png)
+
