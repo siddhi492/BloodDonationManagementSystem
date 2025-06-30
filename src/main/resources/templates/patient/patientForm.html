@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Blood Request Form</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="form-box">
+    <h2>Submit Blood Request</h2>
+    <form method="post" th:object="${request}" th:action="@{/patient/form}" autocomplete="off">
+        <input type="text" th:field="*{name}" placeholder="Patient name" required autocomplete="off" />
+        <input type="text" th:field="*{bloodGroup}" placeholder="Blood group" required autocomplete="off" />
+        <input type="number" th:field="*{units}" placeholder="Units required" required autocomplete="off" />
+        <input type="text" th:field="*{hospital}" placeholder="Hospital name" required autocomplete="off" />
+        <input type="text" th:field="*{city}" placeholder="City" required autocomplete="off" />
+        <input type="text" th:field="*{contact}" placeholder="Contact number" required autocomplete="off" />
+        <button type="submit">Submit Request</button>
+     </form>
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="/" class="big-btn" style="text-decoration: none;">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Available Donors</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="form-box">
+    <h2>Donors List</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Blood Group</th>
+            <th>Age</th>
+            <th>Contact</th>
+            <th>City</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="donor : ${donors}">
+            <td th:text="${donor.name}"></td>
+            <td th:text="${donor.bloodGroup}"></td>
+            <td th:text="${donor.age}"></td>
+            <td th:text="${donor.contact}"></td>
+            <td th:text="${donor.city}"></td>
+        </tr>
+        </tbody>
+     </table>
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="/" class="big-btn" style="text-decoration: none;">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+</div>
+</body>
+</html>

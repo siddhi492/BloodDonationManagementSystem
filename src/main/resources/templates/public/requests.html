@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Blood Requests</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="form-box">
+    <h2>Blood Requests</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Blood Group</th>
+            <th>Units</th>
+            <th>Hospital</th>
+            <th>City</th>
+            <th>Contact</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="req : ${requests}">
+            <td th:text="${req.name}"></td>
+            <td th:text="${req.bloodGroup}"></td>
+            <td th:text="${req.units}"></td>
+            <td th:text="${req.hospital}"></td>
+            <td th:text="${req.city}"></td>
+            <td th:text="${req.contact}"></td>
+        </tr>
+        </tbody>
+   </table>
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="/" class="big-btn" style="text-decoration: none;">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+</div>
+</body>
+</html>

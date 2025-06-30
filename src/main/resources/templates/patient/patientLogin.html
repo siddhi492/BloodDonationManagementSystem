@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Patient Login/Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="form-box">
+    <h2>Patient Access</h2>
+
+    <div th:if="${error}" class="alert error" th:text="${error}"></div>
+    <div th:if="${msg}" class="alert success" th:text="${msg}"></div>
+
+    <form th:action="@{/patient/login}" method="post" autocomplete="off">
+        <label>Existing User? Login</label>
+        <input type="text" name="username" placeholder="Enter username" required autocomplete="off">
+        <input type="password" name="password" placeholder="Enter password" required autocomplete="off">
+        <button type="submit">Login</button>
+    </form>
+
+    <hr>
+
+    <form th:action="@{/patient/register}" method="post" autocomplete="off">
+        <label>New User? Register</label>
+        <input type="text" name="username" placeholder="Choose username" required autocomplete="off">
+        <input type="password" name="password" placeholder="Choose password" required autocomplete="off">
+        <button type="submit">Register</button>
+     </form>
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="/" class="big-btn" style="text-decoration: none;">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+</div>
+</body>
+</html>
